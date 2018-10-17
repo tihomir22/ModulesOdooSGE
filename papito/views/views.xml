@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openerp>
+    <data>
+        <record model="ir.actions.act_window" id="course_list_action">
+            <field name="name">Cities</field>
+            <field name="res_model">papito.city</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create a City</p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="course_list_action2">
+            <field name="name">Hotels</field>
+            <field name="res_model">papito.hotel</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create a Hotel</p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="course_list_action3">
+            <field name="name">Rooms</field>
+            <field name="res_model">papito.habitacion</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create a Room</p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="course_list_action4">
+            <field name="name">Booking</field>
+            <field name="res_model">papito.reserva</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create a Booking</p>
+            </field>
+        </record>
+
+        <menuitem id="main_openacademy_menu" name="Hotel 6 Stars"/>
+        <menuitem id="openacademy_menu" name="Hotel 6 Stars" parent="main_openacademy_menu"/>
+        <menuitem id="courses_menu" name="Cities" parent="openacademy_menu" action="course_list_action"/>
+        <menuitem id="courses_menu2" name="Hotel" parent="openacademy_menu" action="course_list_action2"/>
+        <menuitem id="courses_menu3" name="Rooms" parent="openacademy_menu" action="course_list_action3"/>
+        <menuitem id="courses_menu4" name="Booking" parent="openacademy_menu" action="course_list_action4"/>
+   </data>
+</openerp>
