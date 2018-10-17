@@ -42,11 +42,22 @@
             </field>
         </record>
 
+        <record model="ir.actions.act_window" id="course_list_action5">
+            <field name="name">Fotos</field>
+            <field name="res_model">papito.fotos</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Upload Photos</p>
+            </field>
+        </record>
+
         <menuitem id="main_openacademy_menu" name="Hotel 6 Stars"/>
         <menuitem id="openacademy_menu" name="Hotel 6 Stars" parent="main_openacademy_menu"/>
         <menuitem id="courses_menu" name="Cities" parent="openacademy_menu" action="course_list_action"/>
         <menuitem id="courses_menu2" name="Hotel" parent="openacademy_menu" action="course_list_action2"/>
         <menuitem id="courses_menu3" name="Rooms" parent="openacademy_menu" action="course_list_action3"/>
         <menuitem id="courses_menu4" name="Booking" parent="openacademy_menu" action="course_list_action4"/>
+        <menuitem id="courses_menu5" name="Photos" parent="openacademy_menu" action="course_list_action5"/>
    </data>
 </openerp>
