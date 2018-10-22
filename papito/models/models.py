@@ -35,11 +35,20 @@ class city(models.Model):
         fechaInicio=fields.Date()
         fechaFinal = fields.Date()
         habitaciones=fields.Many2one("papito.habitacion", "Habitacion a reservar")
+        clientes = fields.Many2one("res.partner","Nombre del cliente")
 
     class fotos(models.Model):
         _name = 'papito.fotos'
         name=fields.Char("Nombre de la foto")
         foto=fields.Binary("Seleccione una foto para agregar")
+
+    class servicis(models.Model):
+        _name='papito.servicis'
+        name=fields.Char("Nombre del servicio")
+        tipo = fields.Selection([('1', 'Higiene personal'), ('2', 'Higiene animal'), ('3', 'Cuidado del vehiculo'), ('3', 'Cuidado del vehiculo'), ('4', 'Descanso'), ('5', 'Comidas y refrigerios')])
+        imageser=fields.Binary("Seleccione una foto para el servicio")
+
+
 
 
 

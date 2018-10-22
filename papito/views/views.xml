@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<openerp>
+<odoo>
     <data>
-        <record model="ir.actions.act_window" id="course_list_action">
+        <!-- <record model="ir.actions.act_window" id="course_list_action">
             <field name="name">Cities</field>
             <field name="res_model">papito.city</field>
             <field name="view_type">form</field>
@@ -10,7 +10,36 @@
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">Create a City</p>
             </field>
+        </record> -->
+
+        <!--
+
+          <record model="ir.ui.view" id="course_form_view">
+            <field name="name">Cities</field>
+            <field name="model">papito.city</field>
+            <field name="arch" type="xml">
+                <form string="City form">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
         </record>
+        -->
+
+        <record model="ir.ui.view" id="client_form_view_1">
+        <field name="name">papito.city.name</field>
+        <field name="model">papito.city</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <field name="name"/>
+            <field name="description"/>
+        </field>
+        </record>
+
 
         <record model="ir.actions.act_window" id="course_list_action2">
             <field name="name">Hotels</field>
@@ -52,6 +81,17 @@
             </field>
         </record>
 
+        <record model="ir.actions.act_window" id="course_list_action6">
+            <field name="name">Servicios</field>
+            <field name="res_model">papito.servicis</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <!-- <field name="imageser" widget="image"/> -->
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create a Service</p>
+            </field>
+        </record>
+
         <menuitem id="main_openacademy_menu" name="Hotel 6 Stars"/>
         <menuitem id="openacademy_menu" name="Hotel 6 Stars" parent="main_openacademy_menu"/>
         <menuitem id="courses_menu" name="Cities" parent="openacademy_menu" action="course_list_action"/>
@@ -59,5 +99,6 @@
         <menuitem id="courses_menu3" name="Rooms" parent="openacademy_menu" action="course_list_action3"/>
         <menuitem id="courses_menu4" name="Booking" parent="openacademy_menu" action="course_list_action4"/>
         <menuitem id="courses_menu5" name="Photos" parent="openacademy_menu" action="course_list_action5"/>
+        <menuitem id="courses_menu6" name="Servicis" parent="openacademy_menu" action="course_list_action6"/>
    </data>
-</openerp>
+</odoo>
